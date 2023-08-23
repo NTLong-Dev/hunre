@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <link rel="stylesheet" href="style-module.css">
+  <title>Document</title>
+</head>
+<body>
+  <img src="https://cntt.hunre.edu.vn/media/cntt/data/IMG_20200505_154119.jpg" class="img-header">
+  <header>
+    <div class="widget-header">
+      <a href=""><img src="/img/HUNRE_Logo.png" width="100px" class="logo"></a>
+  <div class="menu-bar">
+      <a href="">Giới thiệu</a>
+        <a href="#" class="items" >Tin tức<ion-icon class="icon-dropdown"  name="chevron-down-outline"></ion-icon></a>
+        <div class="li">
+        <a href=""><ion-icon name="folder-open-outline"></ion-icon> Danh mục</a>
+        <div class="li-1">
+          <a href=""><ion-icon name="folder-open-outline"></ion-icon> Phân loại</a>
+        </div>
+        <div class="li-2">
+          <a href=""><ion-icon name="folder-open-outline"></ion-icon> Hình ảnh</a>
+        </div>
+      </div>
+      <a href="">Phản hồi</a>
+      <a href="">Đào tạo</a>
+  </div>
+
+  <a href="#" class="contact">
+    <img src="https://cntt.hunre.edu.vn/media/cntt/data/Hotline.gif" width="220px">
+  </a>
+  <div class="search">
+    <input type="text" class="search-bar" placeholder="Nhập vào sản phẩm">
+    <button class="submit" type="submit"><ion-icon name="search-outline" style="color: white;"></ion-icon></button>
+</div>
+</div>
+  </header> 
+  <div class="block-1">
+  <div class="slide-shown">
+    <div class="list-image">
+<img  src="https://cntt.hunre.edu.vn/media/cntt/cache/data/banner/banner-thong-tin-tuyen-sinh-cr-590x250.png"  width ="100%">
+<img src="https://cntt.hunre.edu.vn/media/cntt/cache/data/ts2023-cr-590x250.jpg" width ="100%">
+    </div>
+    <div class="btns">
+      <div class="btn-l btn"><ion-icon name="chevron-back-outline"></ion-icon></ion-icon></div>
+      <div class="btn-r btn"><ion-icon name="chevron-forward-outline"></ion-icon></div>
+    </div>
+    <div class="btn-img">
+      <div class="img-item img-item-0 active" ></div>
+      <div class="img-item img-item-1"></div>
+    </div>
+  </div>
+</div>  
+<ion-icon name="chevron-back-outline" class="back"></ion-icon></ion-icon>
+<div class="block">
+  <a href=""><ion-icon name="checkmark-outline"></ion-icon>Nghiên cứu khoa học</a>
+  <a href=""><ion-icon name="checkmark-outline"></ion-icon>Hợp tác</a>
+  <a href=""><ion-icon name="checkmark-outline"></ion-icon>Sinh viên</a>
+  <a href=""><ion-icon name="checkmark-outline"></ion-icon>Tài liệu</a>
+</div>
+  <script>
+    const listImage = document.querySelector('.list-image')
+    const btnl = document.querySelector('.btn-l');
+    const btnr = document.querySelector('.btn-r');
+    const imgs = document.querySelectorAll('.slide-shown .list-image img');
+    let index = 0;
+    const handle = () => {
+      index ++
+      if(index == 2){
+        index = 0;
+      }
+      let width = imgs[0].offsetWidth
+      listImage.style.transform = `translateX(${width * -1 * index}px)`
+      document.querySelector('.active').classList.remove('active')
+        document.querySelector('.img-item-'+index).classList.add('active')
+    }
+    let handleEvent = setInterval(handle,4000);
+    btnr.addEventListener('click' , () => {
+      clearInterval(handleEvent)
+       handle();
+       handleEvent = setInterval(handle,4000)
+    })
+    btnl.addEventListener('click' , () => {
+      clearInterval(handleEvent)
+      index --
+      if(index == -1){
+        index = 1;
+      }
+      let width = imgs[0].offsetWidth
+      listImage.style.transform = `translateX(${width * -1 * index}px)`
+      handleEvent = setInterval(handle,4000)
+      document.querySelector('.active').classList.remove('active')
+        document.querySelector('.img-item-'+index).classList.add('active')
+    })
+  </script>
+</body>
+</html>

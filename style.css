@@ -1,0 +1,93 @@
+body{
+    background-image: linear-gradient(to right, #ff0000, #fff);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.login{
+    width: 300px;
+    height: 300px;
+    border: 0;
+    border-radius: 20px;
+    text-align: center;
+    background-image: linear-gradient(to right,#737DFE, #FFCAC9);
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 200px;
+    padding-top: 20px;
+}
+h1{
+    color: #fff;
+    font-size: 50px;
+    margin-top: -100px;
+    font-family: 'Times New Roman', Times, serif;
+}
+input{
+    height: 70px;
+    width: 500px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    padding-left: 10px;
+    margin-left: -140px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0 35px;
+}
+.icon1{
+    position: absolute;
+    transform: translate(-450%, 70%);
+    font-size: 30px;
+}
+.icon2{
+    position: absolute;
+    transform: translate(-450%, 70%);
+    font-size: 30px;
+}
+input:focus {
+    outline:none
+  }
+button{
+    margin-left: -5%;
+    height: 70px;
+    width: 324px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #45a049;
+    color: white;
+    font-size: 25px ;
+    font-family: 'Times New Roman', Times, serif;
+}
+button:hover{
+    background-color:#FFA500 ;
+    cursor: pointer;
+}
+.forget{
+    margin-right: 200px;
+    margin-left: -250px;
+}
+p{
+    font-family: 'Times New Roman', Times, serif;
+}
+.back{
+        margin-left: -60%;
+        margin-right: 100%;
+        color: #ffff;
+
+}   
+    img{
+        width: 50%;
+        margin-right: -774px;
+    }
+    .check{
+        width: 15px;
+        position: absolute;
+        left: 70%;
+        top: 53%;
+    }
+    Strong{
+        position: absolute;
+        left: 62.3%;
+        top: 57%;
+    }

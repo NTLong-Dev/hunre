@@ -1,0 +1,251 @@
+.img-header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 999;
+  
+}
+body{
+  background-color: gainsboro;
+}
+body +.slide-shown{
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .slide-shown{
+    top: 50px;
+    width: 500px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+  }
+  .slide-shown:hover .btn{
+       display: flex;
+  }
+  .list-image{
+    display: flex;
+    transform: translateX();
+    transition: 0.5s;
+
+  }
+  .btn{
+    font-size: 40px;
+    color: #999;
+    position: absolute;
+    top: 40%;
+    display: none;
+  }
+  .btn:hover{
+    cursor: pointer;
+    color: white;
+  }
+  .btn-l{
+    left: 0;
+  }
+  .btn-r{
+    right: 0;
+  }
+  .btn-img{
+       position: absolute;
+       bottom: 10px;
+       display: flex;
+       left: 50%;
+       transform: translateX(-50%);
+  }
+  .img-item{
+    border: 1px solid #999;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 50%;
+  }
+  .active{
+    background-color: green;
+  }
+  header{
+    background-color: green;
+    position: absolute;
+    top: 24.5%;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+
+    height: 14%;
+  }
+  .widget-header{
+    display: flex;
+    margin-top: 2.5%;
+    justify-items: center;
+    justify-content: center;
+  }
+  .widget-header .menu-bar{
+    position: absolute;
+    left: 7%;
+
+  }
+  .widget-header .menu-bar a{
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 23px;
+    color: #fff;
+  }
+  .widget-header .menu-bar a:hover{
+    color: #dadada;
+    border-bottom: 4px solid #dadada;
+    padding-bottom: 7px;
+  }
+  .widget-header .search{
+    position: absolute;
+    right: 2%;
+    top: 25%;
+
+  }
+  .widget-header .menu-bar a .icon-dropdown{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    font-size: 18px;
+  }
+  .search-bar{
+     width: 400px;
+     height: 50px;
+     padding-left: 15px;
+     border-radius: 5px;
+     border: none;
+
+  }
+  .search-bar:focus{
+    outline: none;
+  }
+  .logo{
+    position: absolute;
+    top: 3%;
+    left: 0%;
+    color: white;
+  }
+  .submit{
+    width: 45px;
+    position: absolute;
+    height: 45px;
+    top: 7%;
+    border-radius: 5px;
+    border: none;
+    left: 88%;
+    background-color: green;
+  }
+  .submit:hover{
+    background-color: greenyellow;
+    cursor: pointer;
+
+  }
+  .contact{
+    position: absolute;
+    top: 0%;
+    left: 38%;
+  }
+  .li{
+    position: absolute;
+    border: 1px solid white;
+    display: none;
+    border-radius: 5px;
+    width: 200px;
+    background-color: green;
+    text-align: center;
+    top: 135%;
+    height: 123px;
+    left:33%;
+  }
+  .li a{
+    color: white;
+    position: absolute;
+    text-decoration: none;
+    top: 5%;
+    left:5%;
+    
+  }
+  .li-1 a{
+    color: white;
+    position: absolute;
+    text-decoration: none;
+    top: 40%;
+    left:5%;
+  }
+  .li-1{
+    border-bottom: 1px solid white ;
+    height: 40px;
+  }
+.menu-bar .items:hover ~ .li {
+display: block;
+}
+.widget-header .menu-bar .li a:hover {
+border-bottom: none;
+}
+.li:hover{
+display: block;
+cursor:auto;
+}
+.li-2 a{
+color: white;
+    position: absolute;
+    text-decoration: none;
+    top: 73%;
+    left:5%;
+}
+.li-2{
+border-bottom: 1px solid white;
+height: 40px;
+}
+.block-1{
+ background-color: white;
+ position: absolute;
+ top: 40%;
+ width: 80%;
+ right: 17%;
+ height: 600px;
+}
+.block{
+  position: fixed;  
+  top: 40%;
+  right: 0%;
+  height: 500px;
+  background-color: green;
+  border: 1px solid white;
+  border-radius: 5px;
+  display: none;
+}
+.block a{
+  border: 1px solid white;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 23px;
+  padding-left: 9px;
+  padding-right: 4px;
+
+
+}
+.block a:hover{
+  color: #dadada;
+
+}
+.back{
+  position: fixed;
+  top: 50%;
+  right: 0%;
+  color:white;
+  background-color: green;
+  border-radius: 100px;
+  font-size: 60px;
+  cursor: pointer;
+}   
+.back:hover + .block{
+  display: block;
+
+}
+.block:hover{
+  display: block;
+  cursor: auto;
+}
